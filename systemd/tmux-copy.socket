@@ -1,0 +1,10 @@
+[Unit]
+Description=tmux copy port - xsel listener socket
+
+[Socket]
+ListenStream=11988
+Accept=yes
+NoDelay=true
+
+[Install]
+WantedBy=default.target

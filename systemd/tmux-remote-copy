@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+STANDARD_INPUT="$( cat - )"
+
+echo "${STANDARD_INPUT}" | nohup xsel --input --primary 2>&1 &
+tmux set-buffer "${STANDARD_INPUT}"
+
+exit 0

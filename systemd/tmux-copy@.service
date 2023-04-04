@@ -1,0 +1,8 @@
+[Unit]
+Description=tmux copy port - xsel listener service
+
+[Service]
+ExecStart=/home/<<USERNAME>>/bin/tmux-remote-copy
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
